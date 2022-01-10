@@ -34,3 +34,5 @@ export default Todo;
 
 // .map renvois un nouveau tableau avec la modification apportée et on peux construire des éléments ou des composants.
 // {todos.map((todo) => <li id={`todo-${todo.id}`}>{todo.texte}</li>)} notation souvent utilisé pour parcourir des données et faire des actions.
+// pour eviter que qu'une fonction soit executer lors de l'hoisting il faut mettre une () => pour qu'il lance seulement quand on clique par exemple
+
