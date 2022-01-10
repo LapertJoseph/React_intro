@@ -16,26 +16,37 @@ import { useState } from "react";
 
         ]);
 
+        const [newTodoText, setNewTodoText] = useState();
+
         const supprimer = (id) => {
             
-            
-
-
             setTodos((prevState) => prevState.filter((todo) => todo.id !== id))
 
         }
-        
+        const updateNewTodo = (e) => {
+            console.log(e.target.value);
+            setNewTodoText(e.target.value);
+        }
+
+        const ajouter = () => {
+            const newTodo = {id: todos.length + 1, texte: newTodoText}
+            setTodos([...todos, newTodo])
+        }
+
         return ( 
             <div className="todo">
-                <ul>
-                    {todos.map((todo) => (
-                        <div key={todo.id}>
-                            <li id={`todo-${todo.id}`}>{todo.texte}</li>                                            {/* Permet de boucler dans le tableau en ajouter todo.texte au nouveau tableau créer par map*/}
-                            <Button onClick={() => supprimer(todo.id)} texte="Supprimer"></Button>                      
-                        </div>
-                    ))}
-                </ul>
+            <div>
+                <input type="text" onChange={(e) => updateNewTodo(e) } />
+                <Button texte="Ajouter" onClick={ajouter}></Button>            
             </div>
+            <ul>
+                {todos.map((todo) => (
+                    <li id={`todo-${todo.id}`} key={`todo-${todo.id}`}>
+                        {todo.texte} <Button onClick={() => supprimer(todo.id)} texte="supprimer"></Button>
+                    </li>
+                ))}
+            </ul>
+        </div>
         );
     }
 
