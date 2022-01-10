@@ -27,7 +27,7 @@ console.log();
 export default App;
 // -----------------------------------------  Commentaire  ----------------------------------------------------------------------------------------//
 
-// 1 - une props sont des parametres (props, ) (le premier sera toujours des props) callback
+// 1 - une props sont des parametres (props, ) (le premier sera toujours des props = callback)
 // 2 - quand on fais un rendu visuel on le met dans le return
 // 3 - la logique du composannt est avant le return
 // 4 - ne pas oublier d'importer le component dans App.js
