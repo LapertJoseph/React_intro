@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import './App.css';
 import Todo from './pages/Todo';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
-import './App.css';
 
 const App = () => {    // Destructuring qui permet de récuperer les props de App.js
 
@@ -11,7 +11,8 @@ console.log();
     <div className="app">
       <Router>
       <nav>
-        <Link to="/">Home</Link>
+        <Link to="/">Home</Link> <br />
+        <Link to="/">À propos</Link> <br />
       </nav>
         <Routes>
           <Route path="/" element={ <Todo /> } />
