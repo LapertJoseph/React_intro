@@ -43,4 +43,4 @@ const Todo = () => {
      );
 }
  
-export default Todo;
+export default Todo; // on export le composant pour qu'il soit disponible dans App.js
