@@ -7,7 +7,7 @@ const Todo = () => {
     return ( 
         <div className="todo" >
             Todo <br />
-            <Button texte="Accepter"/>
+            <Button texte="Mon Bouton"/>
         </div>
      );
 }

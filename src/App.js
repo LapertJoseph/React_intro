@@ -6,7 +6,6 @@ import NotFound from './pages/NotFound';
 
 const App = () => {
 
-console.log();
   return (
     <div className="app">
       <Router>
@@ -23,7 +22,6 @@ console.log();
     </div>
   );
 }
-
 export default App;
 // -----------------------------------------  Commentaire  ----------------------------------------------------------------------------------------//
 
