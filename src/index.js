@@ -5,7 +5,10 @@ import App from './App';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App message="Bonjour"/>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+// un composant commence toujours par une majuscule 
+// en majuscule pour éviter qu'il rentre en conflit dans le DOM
