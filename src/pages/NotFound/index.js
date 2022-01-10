@@ -1,8 +1,6 @@
+import "./index.css"
+
 const NotFound = () => {
-
-
-
-
 
     return ( 
 
