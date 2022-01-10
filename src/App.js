@@ -12,7 +12,7 @@ console.log();
       <Router>
       <nav>
         <Link to="/">Home</Link> <br />
-        <Link to="/">À propos</Link> <br />
+        <Link to="/about">À propos</Link> <br />
       </nav>
         <Routes>
           <Route path="/" element={ <Todo /> } />
