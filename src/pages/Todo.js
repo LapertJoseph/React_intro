@@ -3,10 +3,10 @@ const Todo = () => {
 
 
 
-    
+
     return ( 
         <div className="todo" >
-        Todo
+            Todo
         </div>
      );
 }
