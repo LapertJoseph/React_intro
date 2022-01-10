@@ -3,9 +3,7 @@ import "./index.css";
 const Button = ( {texte} ) => {
     return (
         
-        <button>
-                { texte }
-        </button>
+        <button>{ texte }</button>
         
      );
 }
