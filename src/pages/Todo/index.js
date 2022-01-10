@@ -1,43 +1,36 @@
-import "./index.css"
-import Button from "../Button"
-import { useState } from "react";
+import { useRef, useState } from 'react';
 
-    const Todo = () => {
+import Button from '../../components/Button';
 
-        
-        //ici le hook est useState : gérer le state renvois un tableau (state, setState) = valeur initiale, fonction Callback
+import './index.css';
 
-        const [todos, setTodos] = useState([
+const Todo = () => {
 
-            { id: 1, texte: "Todo 1" },
-            { id: 2, texte: "Todo 2" },
-            { id: 3, texte: "Todo 3" },
-            { id: 4, texte: "Todo 4" }
+    // ici le hook useState
+    const [todos, setTodos] = useState([
+        { id: 1, texte: "Todo 1" },    // <li>Todo 1</li>
+        { id: 2, texte: "Todo 2" },    // <li>Todo 2</li>
+        { id: 3, texte: "Todo 3" },    // <li>Todo 3</li>
+        { id: 4, texte: "Todo 4" }     // <li>Todo 4</li>
+    ]);
 
-        ]);
+    const textRef = useRef();
 
-        const [newTodoText, setNewTodoText] = useState();
+    const supprimer = (id) => {
+        setTodos((prevState) => prevState.filter((todo) => todo.id !== id))
+    }
+    
+    const ajouter = () => {
+        const newTodo = { id: todos.length + 1, texte: textRef.current.value }
+        // setTodos([...todos, newTodo])
+        setTodos(prevState => [...prevState, newTodo])
+    }
 
-        const supprimer = (id) => {
-            
-            setTodos((prevState) => prevState.filter((todo) => todo.id !== id))
-
-        }
-        const updateNewTodo = (e) => {
-            console.log(e.target.value);
-            setNewTodoText(e.target.value);
-        }
-
-        const ajouter = () => {
-            const newTodo = {id: todos.length + 1, texte: newTodoText}
-            setTodos([...todos, newTodo])
-        }
-
-        return ( 
-            <div className="todo">
+    return ( 
+        <div className="todo">
             <div>
-                <input type="text" onChange={(e) => updateNewTodo(e) } />
-                <Button texte="Ajouter" onClick={ajouter}></Button>            
+                <input type="text" ref={textRef}/>
+                <Button texte="Ajouter" onClick={ajouter}></Button>
             </div>
             <ul>
                 {todos.map((todo) => (
@@ -47,12 +40,7 @@ import { useState } from "react";
                 ))}
             </ul>
         </div>
-        );
-    }
-
+     );
+}
+ 
 export default Todo;
-
-// .map renvois un nouveau tableau avec la modification apportée et on peux construire des éléments ou des composants.
-// {todos.map((todo) => <li id={`todo-${todo.id}`}>{todo.texte}</li>)} notation souvent utilisé pour parcourir des données et faire des actions.
-// pour eviter que qu'une fonction soit executer lors de l'hoisting il faut mettre une () => pour qu'il lance seulement quand on clique par exemple
-
