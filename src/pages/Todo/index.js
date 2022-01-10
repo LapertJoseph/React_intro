@@ -1,19 +1,28 @@
 import "./index.css"
-// import Button from "../Button"
-
+import Button from "../Button"
+import { useState } from "react";
 
     const Todo = () => {
 
-        const todos = [
+        
+        //ici le hook est useState : gérer le state renvois un tableau (state, setState) = valeur initiale, fonction Callback
+
+        const [todos, setTodos] = useState([
+
             { id: 1, texte: "Todo 1" },
             { id: 2, texte: "Todo 2" },
             { id: 3, texte: "Todo 3" },
             { id: 4, texte: "Todo 4" }
-        ]
+
+        ]);
 
         const supprimer = (id) => {
-            console.log(id);
-            /* Supprimer ma todo */
+            
+            
+
+
+            setTodos((prevState) => prevState.filter((todo) => todo.id !== id))
+
         }
         
         return ( 
@@ -21,8 +30,8 @@ import "./index.css"
                 <ul>
                     {todos.map((todo) => (
                         <div key={todo.id}>
-                        <li id={`todo-${todo.id}`}>{todo.texte}</li>                                            {/* Permet de boucler dans le tableau en ajouter todo.texte au nouveau tableau créer par map*/}
-                        <button onClick={() => supprimer(todo.id)} key={`btn-${todo.id}`}>Supprimer</button>                      
+                            <li id={`todo-${todo.id}`}>{todo.texte}</li>                                            {/* Permet de boucler dans le tableau en ajouter todo.texte au nouveau tableau créer par map*/}
+                            <Button onClick={() => supprimer(todo.id)} texte="Supprimer"></Button>                      
                         </div>
                     ))}
                 </ul>
