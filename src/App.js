@@ -4,7 +4,7 @@ import Todo from './pages/Todo';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
 
-const App = () => {    // Destructuring qui permet de récuperer les props de App.js
+const App = () => {
 
 console.log();
   return (
@@ -31,6 +31,7 @@ export default App;
 // 2 - quand on fais un rendu visuel on le met dans le return
 // 3 - la logique du composannt est avant le return
 // 4 - ne pas oublier d'importer le component dans App.js
-// 5 - import de BrowserRouter as Router et Routes as Switch et Route pour les rendu des components.
+// 5 - import de BrowserRouter as Router et Routes as Switch, Route pour les rendu des components et Link pour les navigation.
 // 6 - Ajout des route Todo, About et Erreur
-// 7 - Ajout Balise nav et link vers Home
+// 7 - Ajout Balise nav et link
+// 8 - 
