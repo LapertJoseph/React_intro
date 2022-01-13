@@ -11,7 +11,7 @@ const App = () => {
     <div className="app">
       <Router>
       <nav>
-        <Link to="/">Home</Link> <br />
+        <Link to="/">Todo</Link> <br />
         <Link to="/about">À propos</Link> <br />
         <Link to="/counter">Counter</Link>
       </nav>
