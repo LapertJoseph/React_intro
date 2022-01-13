@@ -13,7 +13,7 @@ const App = () => {
       <nav>
         <Link to="/">Home</Link> <br />
         <Link to="/about">À propos</Link> <br />
-        <Link to="/counter">counter</Link>
+        <Link to="/counter">Counter</Link>
       </nav>
         <Routes>
           <Route path="/" element={ <Todo /> } />
