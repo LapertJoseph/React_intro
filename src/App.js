@@ -16,7 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={ <Todo /> } />
           <Route path="/about" element={ <About /> } />
-          <Route path="*" element={ <NotFound/>} />
+          <Route path="*" element={ <NotFound/> } />
         </Routes>
       </Router>
     </div>
@@ -32,4 +32,3 @@ export default App;
 // 5 - import de BrowserRouter as Router et Routes as Switch, Route pour les rendu des components et Link pour les navigation.
 // 6 - Ajout des route Todo, About et Erreur
 // 7 - Ajout Balise nav et link
-// 8 - 

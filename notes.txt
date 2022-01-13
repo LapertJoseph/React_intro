@@ -1,0 +1,13 @@
+problématique générale : synchroniser la vue avec l'état de l'app : state.
+l'état de l'app c'est les données de l'application 
+
+ex : todo liste 
+
+donnée en Js en objet
+ajouter un objet dans la todo , html se met a jour par rapport au données : état
+
+React gere ca tous seul grace a useState qui va permettre de rafraichir le render.
+
+useState renvoi un tableau en destructuration : 
+
+const [state, setState] = useState(initialState)
