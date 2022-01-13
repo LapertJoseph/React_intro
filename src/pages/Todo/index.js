@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react';                                                                   // on importe les hooks useRef et useState (déclare un état=données et founis aussi la fonction qui modifie l'état)
 import Button from '../../components/Button';                                                               // on importe le composant Button que l'on a créer 
-import Counter from '../../components/Compteur';
+
 
 import './index.css';                                                                                       // importe le fichier css pour ajouter du style dans la page des Todo
 
@@ -38,7 +38,6 @@ const Todo = () => {                                                            
                     </li>
                 ))}
             </ul>
-            <Counter texte="Réinitialiser"></Counter>
         </div>
      );
 }

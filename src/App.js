@@ -3,6 +3,7 @@ import './App.css';
 import Todo from './pages/Todo';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
+import Counter from './components/Counter';
 
 const App = () => {
 
@@ -12,10 +13,12 @@ const App = () => {
       <nav>
         <Link to="/">Home</Link> <br />
         <Link to="/about">À propos</Link> <br />
+        <Link to="/counter">counter</Link>
       </nav>
         <Routes>
           <Route path="/" element={ <Todo /> } />
           <Route path="/about" element={ <About /> } />
+          <Route path="/counter" element={ <Counter initialCount={0} toto="count2" className="counter"/> } />   {/* ici on passe le state de base */}
           <Route path="*" element={ <NotFound/> } />
         </Routes>
       </Router>
