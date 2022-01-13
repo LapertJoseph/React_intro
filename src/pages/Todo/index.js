@@ -6,7 +6,7 @@ import './index.css';                                                           
 
 const Todo = () => {                                                                                        // on déclare un component Todo et on ajoute une fonction fléchée
 
-                                                                                                            // ici le hook useState
+    // ici le hook useState
     const [todos, setTodos] = useState([                                                                    // on définis la variable de défaut a un tableau Todo
         { id: 1, texte: "Todo 1" },                                                                         // <li>Todo 1</li>                    
         { id: 2, texte: "Todo 2" },                                                                         // <li>Todo 2</li>
