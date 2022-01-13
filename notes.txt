@@ -1,13 +1,23 @@
-problématique générale : synchroniser la vue avec l'état de l'app : state.
+problématique générale : 
+synchroniser la vue avec l'état de l'app : state.
 l'état de l'app c'est les données de l'application 
 
 ex : todo liste 
+donnée en JS en objet
+ajouter un objet dans la todo , le DOM se met a jour par rapport au données : (état)
 
-donnée en Js en objet
-ajouter un objet dans la todo , html se met a jour par rapport au données : état
+React gère ca tous seul grace a useState qui va permettre de rafraichir le render.
 
-React gere ca tous seul grace a useState qui va permettre de rafraichir le render.
+useState renvois un tableau en destructuration : 
+const [state, setState] = useState(initialState) <= Voir exemple counter 
+-----------------------------------------------------------------------------------------
+Problématique du useRef (hook additionel): 
+syntaxe du useRef : const textRef = useRef (initialValue)
+useRef permet de renvoyer un objet.
+useRef permet de faire référence a du html dans notre cas
+Des fois on a pas besoin de mettre a jour la vue sur un changement d'état 
+utilise un useRef quand on met pas a jour la vue.
 
-useState renvoi un tableau en destructuration : 
+quand on veut faire une référence à un élément en html on utilisera un useRef.
 
-const [state, setState] = useState(initialState)
+-----------------------------------------------------------------------------------------
